@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 import Home from './pages/Home.tsx';
 import Header from './components/Header.tsx'
 import Footer from './components/Footer.tsx'
+import Product from './pages/Productpage.tsx'
 
 function DefaultLayout() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<Home />} />
+            <Route path="/produkt" element={<Product/>} /> {/* Gör path till en variabel sen*/}
           </Route>
         </Routes>
       </Router>
