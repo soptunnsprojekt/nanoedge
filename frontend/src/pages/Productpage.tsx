@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import productimage from '../assets/nanoedge_humid_temp.png';
 import productimage2 from '../assets/NanoEdge_logotyp2.png';
-import { ChevronLeft } from '@heroicons/react/24/solid'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 function Product() {
     const images = [productimage, productimage2];
@@ -22,21 +22,23 @@ function Product() {
                             className="max-w-full h-auto rounded-t-lg"
                         />
 
-                        {/* Left Arrow */}
+                        {/* Left Chevron Icon */}
                         <button
                             onClick={prevImage}
                             className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white rounded-full p-2 hidden group-hover:block"
                         >
-                            &#8592;
+                            <ChevronLeftIcon className="h-6 w-6" />
                         </button>
 
-                        {/* Right Arrow */}
+                        {/* Right Chevron Icon */}
                         <button
                             onClick={nextImage}
                             className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white rounded-full p-2 hidden group-hover:block"
                         >
-                            &#8594;
+                            <ChevronRightIcon className="h-6 w-6" />
                         </button>
+
+
                     </div>
 
                     {/* Specification Table */}
@@ -45,8 +47,8 @@ function Product() {
                         <table className="w-full text-gray-200 border border-gray-600 border-collapse">
                             <thead>
                                 <tr>
-                                    <th className="border border-gray-600 px-4 py-2 text-lg font-semibold text-center">Specifikation</th>
-                                    <th className="border border-gray-600 px-4 py-2 text-lg font-semibold text-center">Värde</th>
+                                    <th className="border px-4 py-2 text-lg font-semibold text-center">Specifikation</th>
+                                    <th className="border px-4 py-2 text-lg font-semibold text-center">Värde</th>
                                 </tr>
                             </thead>
                             <tbody className="text-gray-300">
