@@ -8,8 +8,8 @@ function Header() {
         <a href="/"><img src={logo} alt="NanoEdge Logo" className="w-3xs" /></a>
       </div>
       <nav className="flex space-x-6">
-        <a href="#" className="underline-animation">Hem</a>
-        <a href="#" className="underline-animation">Produkter</a>
+        <a href="/" className="underline-animation">Hem</a>
+        <a href="/produkt" className="underline-animation">Produkter</a>
         <a href="#" className="underline-animation">Kontakta oss</a>
         <a href="#" className="underline-animation">Om oss</a>
       </nav>

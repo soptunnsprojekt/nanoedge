@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import productimage from '../assets/nanoedge_humid_temp.png';
 import productimage2 from '../assets/NanoEdge_logotyp2.png';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+//import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 function Product() {
     const images = [productimage, productimage2];
@@ -27,7 +27,7 @@ function Product() {
                             onClick={prevImage}
                             className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white rounded-full p-2 hidden group-hover:block"
                         >
-                            <ChevronLeftIcon className="h-6 w-6" />
+                           {/* <ChevronLeftIcon className="h-6 w-6" /> */}
                         </button>
 
                         {/* Right Chevron Icon */}
@@ -35,7 +35,7 @@ function Product() {
                             onClick={nextImage}
                             className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white rounded-full p-2 hidden group-hover:block"
                         >
-                            <ChevronRightIcon className="h-6 w-6" />
+                            {/* <ChevronLeftIcon className="h-6 w-6" /> */}
                         </button>
 
 

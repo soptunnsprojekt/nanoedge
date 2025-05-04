@@ -16,7 +16,7 @@ function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* Product 1 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <a href="#"><img src={logo} alt="Product 1" className="object-cover p-1.5 transition-transform duration-300 ease-in-out transform hover:scale-105" /></a>
+            <a href="/produkt"><img src={logo} alt="Product 1" className="object-cover p-1.5 transition-transform duration-300 ease-in-out transform hover:scale-105" /></a>
             <div className="p-4">
               <a href="#"><h3 className="text-xl text-black font-semibold">Produkt 1</h3></a>
               <p className="text-gray-500">Beskrivning av produkt 1.</p>
