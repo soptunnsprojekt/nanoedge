@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import productimage from '../assets/nanoedge_humid_temp.png';
 import productimage2 from '../assets/NanoEdge_logotyp2.png';
-//import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 function Product() {
     const images = [productimage, productimage2];
@@ -11,10 +11,10 @@ function Product() {
     const prevImage = () => setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
 
     return (
-        <main className="flex-grow container mx-auto p-8 text-gray-100">
-            <div className="flex flex-row gap-x-8">
+        <main className="flex-grow container mx-auto p-8 text-gray-100 mt-[70px]">
+            <div className="flex flex-col md:flex-row gap-8">
                 {/* Image & Spec Section */}
-                <div className="w-1/2 flex-col">
+                <div className="w-full md:w-1/2 flex-col">
                     <div className="relative group">
                         <img
                             src={images[currentImageIndex]}
@@ -27,7 +27,7 @@ function Product() {
                             onClick={prevImage}
                             className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white rounded-full p-2 hidden group-hover:block"
                         >
-                           {/* <ChevronLeftIcon className="h-6 w-6" /> */}
+                            <ChevronLeftIcon className="h-6 w-6" />
                         </button>
 
                         {/* Right Chevron Icon */}
@@ -35,39 +35,40 @@ function Product() {
                             onClick={nextImage}
                             className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white rounded-full p-2 hidden group-hover:block"
                         >
-                            {/* <ChevronLeftIcon className="h-6 w-6" /> */}
+                            <ChevronRightIcon className="h-6 w-6" />
                         </button>
-
-
                     </div>
 
                     {/* Specification Table */}
                     <div className="mt-6 bg-slate-900 p-6 rounded-b-lg text-left leading-relaxed">
                         <h1 className="text-2xl font-bold mb-4">Teknisk Specifikation av Nanoedge Airsense:</h1>
-                        <table className="w-full text-gray-200 border border-gray-600 border-collapse">
-                            <thead>
-                                <tr>
-                                    <th className="border px-4 py-2 text-lg font-semibold text-center">Specifikation</th>
-                                    <th className="border px-4 py-2 text-lg font-semibold text-center">Värde</th>
-                                </tr>
-                            </thead>
-                            <tbody className="text-gray-300">
-                                <tr><td className="border px-4 py-2">Operativsystem</td><td className="border px-4 py-2 text-center">Micropython</td></tr>
-                                <tr><td className="border px-4 py-2">Anslutning</td><td className="border px-4 py-2 text-center">USB-C</td></tr>
-                                <tr><td className="border px-4 py-2">Temperatursensor</td><td className="border px-4 py-2 text-center">DHT22</td></tr>
-                                <tr><td className="border px-4 py-2">Luftkvalitetssensor</td><td className="border px-4 py-2 text-center">MQ-135</td></tr>
-                                <tr><td className="border px-4 py-2">Drivspänning</td><td className="border px-4 py-2 text-center">5V</td></tr>
-                                <tr><td className="border px-4 py-2">Processor</td><td className="border px-4 py-2 text-center">ESP32-C6 32-bit RISC-V</td></tr>
-                                <tr><td className="border px-4 py-2">WiFi-version</td><td className="border px-4 py-2 text-center">WiFi 6</td></tr>
-                                <tr><td className="border px-4 py-2">Bluetooth-version</td><td className="border px-4 py-2 text-center">Bluetooth 5 (LE)</td></tr>
-                                <tr><td className="border px-4 py-2">Processorhastighet</td><td className="border px-4 py-2 text-center">160MHz</td></tr>
-                            </tbody>
-                        </table>
+
+                        <div className="overflow-x-auto">
+                            <table className="min-w-[500px] w-full text-gray-200 border border-gray-600 border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th className="border px-4 py-2 text-lg font-semibold text-center">Specifikation</th>
+                                        <th className="border px-4 py-2 text-lg font-semibold text-center">Värde</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-gray-300">
+                                    <tr><td className="border px-4 py-2">Operativsystem</td><td className="border px-4 py-2 text-center">Micropython</td></tr>
+                                    <tr><td className="border px-4 py-2">Anslutning</td><td className="border px-4 py-2 text-center">USB-C</td></tr>
+                                    <tr><td className="border px-4 py-2">Temperatursensor</td><td className="border px-4 py-2 text-center">DHT22</td></tr>
+                                    <tr><td className="border px-4 py-2">Luftkvalitetssensor</td><td className="border px-4 py-2 text-center">MQ-135</td></tr>
+                                    <tr><td className="border px-4 py-2">Drivspänning</td><td className="border px-4 py-2 text-center">5V</td></tr>
+                                    <tr><td className="border px-4 py-2">Processor</td><td className="border px-4 py-2 text-center">ESP32-C6 32-bit RISC-V</td></tr>
+                                    <tr><td className="border px-4 py-2">WiFi-version</td><td className="border px-4 py-2 text-center">WiFi 6</td></tr>
+                                    <tr><td className="border px-4 py-2">Bluetooth-version</td><td className="border px-4 py-2 text-center">Bluetooth 5 (LE)</td></tr>
+                                    <tr><td className="border px-4 py-2">Processorhastighet</td><td className="border px-4 py-2 text-center">160MHz</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
                 {/* Description Section */}
-                <div className="w-1/2 bg-slate-900 p-6 rounded-lg text-left leading-relaxed">
+                <div className="w-full md:w-1/2 bg-slate-900 p-6 rounded-lg text-left leading-relaxed">
                     <h1 className="text-2xl font-bold mb-4">Nanoedge Airsense</h1>
                     <p className="mb-4 text-gray-200">
                         Nanoedge AirSense är inte bara en enhet för temperatur, luftfuktighet och luftkvalitet – det är din framtidssäkra plattform för fullständig inomhusövervakning.

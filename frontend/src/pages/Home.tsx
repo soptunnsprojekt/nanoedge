@@ -4,7 +4,7 @@ function Home() {
   return (
     <main className="flex-grow container mx-auto p-8 text-center text-gray-100">
       <div className="xl:container md:p-3 pt-0 pb-16 m-auto mb-24">
-        <h1 className="text-6xl font-bold mb-4 text-center tracking-tight mt-15">
+        <h1 className="text-5xl font-bold mb-4 text-center tracking-tight mt-15">
           NANOEDGE
         </h1>
         <p className="text-lg">Sensorn för Framtiden!</p>
